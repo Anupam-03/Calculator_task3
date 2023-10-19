@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="0" id="display" disabled>
+        <div class="buttons">
+            <div class="row">
+                <button onclick="clearDisplay()" class="operation clear">C</button>
+                <button onclick="appendCharacter('(')" class="operation">(</button>
+                <button onclick="appendCharacter(')')" class="operation">)</button>
+                <button onclick="deleteLast()" class="operation delete">
+                    <i class="uil uil-cancel"></i>
+                </button>
+            </div>
+            <div class="row">
+                <button onclick="togglePlusMinus()" class="operation">±</button>
+                <!-- <button onclick="appendCharacter('sqrt(')" class="operation">√</button> -->
+                <button onclick="sqrtFunction()" class="operation">√</button>
+                <button onclick="powerFunction('**')" class="operation">^</button>
+                <button onclick="appendCharacter('/')" class="operation">/</button>
+            </div>
+            <div class="row">
+                <button onclick="appendCharacter('7')">7</button>
+                <button onclick="appendCharacter('8')">8</button>
+                <button onclick="appendCharacter('9')">9</button>
+                <button onclick="appendCharacter('*')" class="operation">
+                    <i class="uil uil-multiply"></i>
+                </button>
+            </div>
+            <div class="row">
+                <button onclick="appendCharacter('4')">4</button>
+                <button onclick="appendCharacter('5')">5</button>
+                <button onclick="appendCharacter('6')">6</button>
+                <button onclick="appendCharacter('-')" class="operation">
+                    <i class="uil uil-minus"></i>
+                </button>
+            </div>
+            <div class="row">
+                <button onclick="appendCharacter('1')">1</button>
+                <button onclick="appendCharacter('2')">2</button>
+                <button onclick="appendCharacter('3')">3</button>
+                <button onclick="appendCharacter('+')" class="operation">
+                    <i class="uil uil-plus"></i>
+                </button>
+            </div>
+            <div class="row">
+                <button onclick="appendCharacter('00')">00</button>
+                <button onclick="appendCharacter('0')">0</button>
+                <button onclick="appendCharacter('.')">.</button>
+                <button onclick="calculateResult()" class="equalBtn">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
